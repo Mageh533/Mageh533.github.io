@@ -7,9 +7,13 @@ import Card from '../components/Card.astro';
 <Layout title="Gianfranco's Portfolio">
 	<main>
 		<SideBar />
-		<div>
+		<div class="info-area">
 			<h1>Gianfranco Cicciomessere</h1>
 			<h2>I am a Software Engineer</h2>
+			<Card 
+			title="About Me"
+			body='I am a software engineer graduate, experienced in full-stack web development, with a passion for learning new technologies and solving problems.' 
+			/>
 		</div>
 	</main>
 </Layout>
@@ -21,6 +25,9 @@ import Card from '../components/Card.astro';
 		font-size: 20px;
 		line-height: 1.6;
 		display: flex;
+	}
+	.info-area {
+		margin-left: 5rem;
 	}
 	h1 {
 		font-size: 4rem;
