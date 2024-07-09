@@ -8,12 +8,17 @@ import Card from '../components/Card.astro';
 	<main>
 		<SideBar />
 		<div class="info-area">
-			<h1>Gianfranco Cicciomessere</h1>
-			<h2>I am a Software Engineer</h2>
+			<h1>Hi, I am Gianfranco</h1>
+			<h2>a Software Engineer</h2>
 			<Card 
 			title="About Me"
 			body='I am a software engineer graduate, experienced in full-stack web development, with a passion for learning new technologies and solving problems.' 
 			/>
+		</div>
+		<div class="right-bar">
+			<a>About me</a>
+			<a>Projects</a>
+			<a>Contact</a>
 		</div>
 	</main>
 </Layout>
@@ -27,7 +32,14 @@ import Card from '../components/Card.astro';
 		display: flex;
 	}
 	.info-area {
+		flex: 1;
 		margin-left: 5rem;
+	}
+	.right-bar {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2rem;
+		padding: 5rem;
 	}
 	h1 {
 		font-size: 4rem;
@@ -40,5 +52,18 @@ import Card from '../components/Card.astro';
 		font-size: 2rem;
 		font-weight: 400;
 		text-align: left;
+	}
+	a {
+		margin-right: 1rem;
+		color: white;
+		text-decoration: none;
+		text-align: left;
+		background: grey;
+		border-radius: 15px;
+		padding: 20px;
+		margin-bottom: 50px;
+	}
+	a :hover {
+		background: #23262d;
 	}
 </style>
