@@ -1,12 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SideBar from '../components/SideBar.astro';
 import Card from '../components/Card.astro';
 ---
 
 <Layout title="Gianfranco's Portfolio">
 	<main>
-		<SideBar />
 		<div class="info-area">
 			<h1>Hi, I am Gianfranco</h1>
 			<h2>a Software Engineer</h2>
@@ -14,11 +12,6 @@ import Card from '../components/Card.astro';
 			title="About Me"
 			body='I am a software engineer graduate, experienced in full-stack web development, with a passion for learning new technologies and solving problems.' 
 			/>
-		</div>
-		<div class="right-bar">
-			<a>About me</a>
-			<a>Projects</a>
-			<a>Contact</a>
 		</div>
 	</main>
 </Layout>
@@ -35,12 +28,6 @@ import Card from '../components/Card.astro';
 		flex: 1;
 		margin-left: 5rem;
 	}
-	.right-bar {
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 2rem;
-		padding: 5rem;
-	}
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;
@@ -52,18 +39,5 @@ import Card from '../components/Card.astro';
 		font-size: 2rem;
 		font-weight: 400;
 		text-align: left;
-	}
-	a {
-		margin-right: 1rem;
-		color: white;
-		text-decoration: none;
-		text-align: left;
-		background: grey;
-		border-radius: 15px;
-		padding: 20px;
-		margin-bottom: 50px;
-	}
-	a :hover {
-		background: #23262d;
 	}
 </style>

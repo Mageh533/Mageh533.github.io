@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import SideBar from '../components/SideBar.astro';
+import RightBar from '../components/RightBar.astro';
 ---
 
 <!doctype html>
@@ -17,7 +20,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<SideBar />
 		<slot />
+		<RightBar />
 	</body>
 	<footer>
 		<p style="color: white; position: fixed; bottom: 10px; left: 45%;">This website is a work in progress!</p>
@@ -39,6 +44,9 @@ const { title } = Astro.props;
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
+	}
+	body {
+		display: flex;
 	}
 	code {
 		font-family:
