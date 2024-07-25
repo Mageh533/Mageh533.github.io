@@ -6,7 +6,8 @@ interface Props {
 const { title } = Astro.props;
 
 import SideBar from '../components/SideBar.astro';
-import RightBar from '../components/RightBar.astro';
+import TopBar from '../components/TopBar.astro';
+
 ---
 
 <!doctype html>
@@ -21,8 +22,10 @@ import RightBar from '../components/RightBar.astro';
 	</head>
 	<body>
 		<SideBar />
-		<slot />
-		<RightBar />
+		<div class="main-content">
+			<TopBar />
+			<slot />
+		</div>
 	</body>
 	<footer>
 		<p style="color: white; position: fixed; bottom: 10px; left: 45%;">This website is a work in progress!</p>
@@ -44,6 +47,17 @@ import RightBar from '../components/RightBar.astro';
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
+	}
+	main {
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.main-content {
+		padding: 2.5rem;
+		margin-left: 5%;
+		width: 80%;
 	}
 	body {
 		display: flex;

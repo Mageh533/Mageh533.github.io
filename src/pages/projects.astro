@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Gianfranco's Portfolio">
+	<main>
+        <h1>My Projects</h1>
+        <h2>Here is some of the projects I worked on</h2>
+        <div class="projects-area">
+            <div class="project">
+                <h3>Caprae</h3>
+                <a href="https://caprae.app/">
+                    <img src="/projects/caprae.png" alt="Caprae.app screenshot" />
+                </a>
+            </div>
+            <div class="project">
+                <h3>Energy Demand Visualization for C.I.R.E.G.S</h3>
+                <a href="https://team3-y3-client.vercel.app/">
+                    <img src="/projects/ciregs.png" alt="Energy Demand Visualization Enhancement for the C.I.R.E.G.S screenshot" />
+                </a>
+            </div>
+        </div>
+	</main>
+</Layout>
+<style>
+    .projects-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+    .project img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        width: 300px;
+        border-radius: 10px;
+    }
+    .project {
+        display: flex;
+        padding-inline: 1rem;
+        background-color: #23262d;
+        border-radius: 15px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .project h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+</style>
