@@ -1,9 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
 ---
 
 <Layout title="Gianfranco's Portfolio">
 	<main>
         <h1>About me</h1>
+		<h2>My skills are</h2>
+		<div class="skills">
+			<Card title='Programming Languages'
+			body='I am familiar with: Java, C#, Python, HTML, CSS, JavaScript, TypeScript and SQL.'
+			 />
+			<Card title='Collaboration' 
+			body="I am familiar with git related flows and have used GitHub, GitLab and Teams in the past when working as a team."
+			 />
+			<Card title='Tech Stacks'
+			body='I can work with: React, Node.js, Spring Boot, Express.js, MongoDB, Firebase, MySQL, Docker, .NET, Azure and AWS.'
+			 />
+			<Card title='Tools'
+			body='I currently use: Visual Studio Code, Visual Studio, IntelliJ IDEA and Figma.'
+			 />
+		</div>
+		<h3>I love to learn, so I can learn new tech stacks quickly and adapt to new framework and programming languages.</h3>
 	</main>
 </Layout>
+<style>
+	.skills {
+		display: grid;
+		margin-top: 2rem;
+		grid-template-columns: auto auto;
+		place-items: center;
+	}
+</style>
