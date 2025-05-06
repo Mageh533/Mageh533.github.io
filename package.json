@@ -12,6 +12,10 @@
   "dependencies": {
     "astro": "^4.11.5",
     "@astrojs/check": "^0.7.0",
-    "typescript": "^5.5.3"
-  }
+    "typescript": "^5.5.3",
+    "vite": ">=5.4.19"
+  },
+  "devDependencies": {
+    "prismjs": ">=1.30.0"
+}
 }
